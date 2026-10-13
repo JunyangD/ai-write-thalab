@@ -1,0 +1,32 @@
+# 模型权重不入库（~400MB），用 scripts/download_models.py 自动下载到 models/
+models/
+*.bin
+*.safetensors
+*.onnx
+*.h5
+.cache/
+
+# 检测产物（各类检测器输出，一律不入库）
+*.aigc*.json
+*.detox.json
+*.detox.md
+*.rewritten.md.aigc*.json
+
+# 本地验证/探测过程产物
+_probe/
+_scratch*/
+_verify*/
+_handoff/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
